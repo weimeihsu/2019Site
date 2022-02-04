@@ -1,0 +1,285 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>NVIDIA MERRY CHRISTMAS</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Facebook Open Graph Meta Tags -->
+<meta property="og:title" content="NVIDIA MERRY CHRISTMAS" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://www.nvidia.com.tw/content/apac/xmas2014/index_tc.html" />
+<meta property="og:image" content="http://www.nvidia.com.tw/content/apac/xmas2014/img/Xmas_share.jpg" />
+<style>
+html {
+	height: auto;
+	width: 100%;
+}
+@font-face {
+	font-family: dinpro;
+	src: url('img/DINPro-Medium.otf') format('woff')
+}
+body {
+	background:radial-gradient(#ffffff 50%,#bac9dc 100%);
+	background: -moz-linear-gradient(top, #bac9dc 0%, #ffffff 100%); /* FF3.6+ */
+	padding: 0;
+	margin: 0;
+	font-family: 'dinpro';
+}
+canvas{
+position: absolute;
+z-index: 5;
+width: 75%;
+height: 60%;
+-webkit-border-radius: 50%;
+-moz-border-radius: 50%;
+border-radius: 50%;
+top: 8%;
+left: 16%;
+	}
+
+.snow {
+	position: absolute;
+	width:100%;
+	height:100%;
+	z-index: 1;
+	background:url(img/snow2.png) no-repeat;
+	background-size:contain;
+}
+
+.snow img{
+	position:absolute;
+	width:100%;
+	height:auto;
+	bottom:0;}
+.greeting{
+	position:absolute;
+	z-index:5;
+	width:40%;
+	right:10%;
+	bottom:5%;
+	}
+.globe {
+	position:absolute;
+	width:52%;
+	height: auto;
+	bottom:20px;
+	left:3%;	
+}
+.globe img {
+	position: relative;
+	z-index: 4;
+	width: 100%;
+	height: auto;
+}
+ul.social {
+	position:absolute;
+	z-index:2;
+	bottom:10px;
+	padding-right:30px;
+	text-align:right;
+	width:100%;
+	box-sizing:border-box;
+	margin:0;
+}
+.social li {
+	list-style: none;
+	display: inline;
+	color:#004831;
+}
+.social li a {
+	text-decoration: none;
+	border: 0;
+	cursor: pointer;
+	background: rgba(0,72,49,1);
+	border-radius: 3px;
+	box-shadow: #414141 1px 1px 2px;
+	padding: 15px 5px 0;
+	margin-right:3px;
+}
+.social li a:hover {
+	background: rgba(118,185,0,1);
+}
+.social li img {
+	height: 25px;
+	width: auto;
+	border: 0;
+}
+.logo{
+	float:left;}
+.logo img{
+	height:50px;
+	margin-top:-7px;}
+@media screen and (max-width: 768px) {
+	.snow {
+	background:url(img/snow-tc.png) no-repeat;
+	background-size:contain;
+}
+.globe {
+	width:70%;
+	bottom:0;
+	left:12%;
+	}
+.greeting{
+	display:none;}
+ul li.none {display:none;}
+}
+@media screen and (max-width: 480px) {
+ul.social {
+	bottom:0;
+	padding:0 10px;
+	}
+.globe {
+	bottom:10px;
+	}
+	}
+@media screen and (max-width: 240px){
+	ul.social {padding:0 5px;}
+	.social li{ display:none;}
+		.logo img{ height:40px;
+		}}
+</style>
+</head>
+<body onload="init();">
+<script type="text/javascript" src="js/ThreeCanvas.js"></script>
+<script type="text/javascript" src="js/Snow.js"></script>
+<script>
+
+			var SCREEN_WIDTH = 400;
+			var SCREEN_HEIGHT = 400;
+
+			var container;
+
+			var particle;
+
+			var camera;
+			var scene;
+			var renderer;
+
+			var mouseX = 0;
+			var mouseY = 0;
+
+			var windowHalfX = 300 / 2;
+			var windowHalfY = 300 / 2;
+			
+			var particles = []; 
+			var particleImage = new Image();//THREE.ImageUtils.loadTexture( "img/ParticleSmoke.png" );
+			particleImage.src = 'img/ParticleSmoke.png'; 
+
+		
+		
+			function init() {
+
+				container = document.getElementById('globe');
+				document.body.appendChild(container);
+
+				camera = new THREE.PerspectiveCamera( 75, SCREEN_WIDTH / SCREEN_HEIGHT, 1, 10000 );
+				camera.position.z = 1000;
+
+				scene = new THREE.Scene();
+				scene.add(camera);
+					
+				renderer = new THREE.CanvasRenderer();
+				renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
+				var material = new THREE.ParticleBasicMaterial( { map: new THREE.Texture(particleImage) } );
+					
+				for (var i = 0; i < 500; i++) {
+
+					particle = new Particle3D( material);
+					particle.position.x = Math.random() * 2000 - 1000;
+					particle.position.y = Math.random() * 2000 - 1000;
+					particle.position.z = Math.random() * 2000 - 1000;
+					particle.scale.x = particle.scale.y =  1;
+					scene.add( particle );
+					
+					particles.push(particle); 
+				}
+
+				container.appendChild( renderer.domElement );
+
+	
+				document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+				document.addEventListener( 'touchstart', onDocumentTouchStart, false );
+				document.addEventListener( 'touchmove', onDocumentTouchMove, false );
+				
+				setInterval( loop, 1000 / 60 );
+				
+			}
+			
+			function onDocumentMouseMove( event ) {
+
+				mouseX = event.clientX - windowHalfX;
+				mouseY = event.clientY - windowHalfY;
+			}
+           
+			function onDocumentTouchStart( event ) {
+
+				if ( event.touches.length == 1 ) {
+
+					event.preventDefault();
+
+					mouseX = event.touches[ 0 ].pageX - windowHalfX;
+					mouseY = event.touches[ 0 ].pageY - windowHalfY;
+				}
+			}
+
+			function onDocumentTouchMove( event ) {
+
+				if ( event.touches.length == 1 ) {
+
+					event.preventDefault();
+
+					mouseX = event.touches[ 0 ].pageX - windowHalfX;
+					mouseY = event.touches[ 0 ].pageY - windowHalfY;
+				}
+			}
+            
+			//
+
+			function loop() {
+
+			for(var i = 0; i<particles.length; i++)
+				{
+
+					var particle = particles[i]; 
+					particle.updatePhysics(); 
+	
+					with(particle.position)
+					{
+						if(y<-1000) y+=2000; 
+						if(x>1000) x-=2000; 
+						else if(x<-1000) x+=2000; 
+						if(z>1000) z-=2000; 
+						else if(z<-1000) z+=2000; 
+					}				
+				}
+			
+				camera.position.x += ( mouseX - camera.position.x ) * 0.05;
+				camera.position.y += ( - mouseY - camera.position.y ) * 0.05;
+				camera.lookAt(scene.position); 
+
+				renderer.render( scene, camera );
+				
+			}
+
+		</script>
+
+
+<div class="snow">
+<div class="globe" id="globe"><img src="img/snow_globe2.png"></div><div class="greeting"><img src="img/greeting_tc.png"></div>
+<img src="img/window.png">
+</div>
+    
+    <ul class="social">
+    <div class="logo"><img src="img/h_logo.png" ></div>
+    <li class="none">share with friends </li>
+      <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.nvidia.com.tw%2Fcontent%2Fapac%2Fxmas2014%2Findex.html" class="popup"><img src="img/social_01.png"></a></li>
+      <li><a href="http://twitter.com/home?status=Season's%20Greetings%20from%20NVIDIA%20http://www.nvidia.com.tw/content/apac/xmas2014/index.html" class="popup"><img src="img/social_02.png"></a></li>
+      <li><a href="https://plus.google.com/share?url=Season's%20Greetings%20from%20NVIDIA%20http://www.nvidia.com.tw/content/apac/xmas2014/index.html" class="popup"><img src="img/social_03.png"></a></li>
+      
+    </ul>
+    
+
+<script src="js/rrssb.min.js"></script>
+
+</body>
+</html>

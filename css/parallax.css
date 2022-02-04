@@ -1,0 +1,99 @@
+body{
+	
+	background: linear-gradient(-45deg, #FF0000, #FFFF00, #008B5B);
+	background-size: 500% 800%;
+	-webkit-animation: Gradient 10s ease infinite;
+	-moz-animation: Gradient 10s ease infinite;
+	animation: Gradient 10s ease infinite;
+}
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+.bg-img1{
+	background: url(../img/resume/leopard.svg);
+	min-height: 60%;
+}
+.bg-img2{
+	background: url(../img/resume/zibra.svg);
+	min-height: 300px;
+}
+.bg-img3{
+	background: url(../img/resume/giraffe.svg);
+	min-height:  300px;
+}
+.bg-img4{
+	background: url(../img/resume/antelope.svg);
+	min-height:  300px;
+}
+.bg-img1,.bg-img2,.bg-img3,.bg-img4{
+	position: relative;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	/* this is the parallax */
+	background-attachment: fixed;
+}
+.text h1{
+	position: absolute;
+	bottom:0;
+	width: 100%;
+	text-align: center;
+	color: #ffffff;
+	font-size: 2.5em;
+	padding: 0;
+	margin: 0;
+}
+.resume-area{
+	background:#ffffff;
+	color: #333333;
+	padding-bottom: 4px;
+}
+.bullet-point ul li{
+	font-size: 1em;
+	margin: 5px 0;
+}
+.bullet-point ul{
+	padding-left: 15px;
+}
+
+@media (max-width: 576px) {
+.bg-img1,.bg-img2,.bg-img3,.bg-img4{
+	/* this is the parallax */
+	background-attachment: scroll;
+}
+.text h1{
+	font-size: 1.5em;
+}
+}/*end bracket of @media 576*/

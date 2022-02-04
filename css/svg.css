@@ -1,0 +1,53 @@
+.sm-4-box svg{
+	width: 100%;
+}
+.bg{fill:#40515E;}
+	.eye-top{
+		fill:none;
+		stroke:#FFFFFF;
+		stroke-width:10;
+		stroke-linecap:round;
+		stroke-linejoin:round;
+		stroke-miterlimit:10;
+		stroke-dasharray: 1000;
+ 	stroke-dashoffset: 1000;
+  	animation: path 2s linear forwards;
+	}
+	.eye-bottom{fill:none;
+		stroke:#FFFFFF;
+		stroke-width:10;
+		stroke-linecap:round;
+		stroke-linejoin:round;
+		stroke-miterlimit:10;
+		stroke-dasharray: 1000;
+ 		stroke-dashoffset: 1000;
+  		animation: path 2s linear forwards;
+	}
+	.red{fill:none;stroke:#B43676;
+		stroke-width:19;
+		stroke-miterlimit:10;
+		stroke-dasharray: 1000;
+ 		stroke-dashoffset: 1000;
+  		animation: path 5s linear forwards 0.5s;
+
+	}
+	.blue{fill:none;
+		stroke:#71C3DB;
+		stroke-width:19;stroke-miterlimit:10;
+		stroke-dasharray: 1000;
+ 		stroke-dashoffset: 1000;
+  		animation: path 4s linear forwards 1s;
+	}
+	.green{fill:none;stroke:#CBD077;
+		stroke-width:19;stroke-miterlimit:10;
+		stroke-dasharray: 1000;
+ 		stroke-dashoffset: 1000;
+  		animation: path 4s linear forwards 1.5s;
+	}
+ @keyframes path {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }

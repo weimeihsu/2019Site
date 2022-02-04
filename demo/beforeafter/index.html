@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Before After</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.qbeforeafter.js"></script>	
+	<script type="text/javascript">
+	$(function () {
+		$('.pic1').qbeforeafter({defaultgap:50, leftgap:0, rightgap:10, caption: false, reveal: 0.5});
+	});
+	</script>
+	<link rel="stylesheet" href="qbeforeafter.css" />
+	<style type="text/css">
+		
+		#container {width:800px; margin:0 auto; font-family:arial;}
+
+		.pic1 {width:722px; height:800px;}		
+		
+		
+	</style>
+</head>
+<body>
+
+	<div id="container">
+				<div class="pic1">
+			<img src="pic1a.jpg" alt="Caption 1" width="722" height="800"/>
+			<img src="pic1b.jpg" alt="Caption 2" width="722" height="800"/>		
+		</div>
+	
+</div>
+	
+	
+	<br/><br/><br/>
+	
+</body>
+</html>

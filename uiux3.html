@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!--[if IE]><meta http-eq4v="x-ua-compatible" content="IE=9" /><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Entertainment</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	
+</head>
+<body>
+<nav class="navbar" id="navbar">
+		<span class="open-slide">
+		
+		 <a class="sandwich-menu" onclick="openSlideMenu()">
+		 	<span></span>
+		 	<span></span>
+		 	<span></span> 
+		</a>
+		</span>
+
+		<ul class="navbar-nav">
+			<li><a href="index.html">About Me</a></li>
+			<li class="dropdown"><a class="dropdown-toggle focus">UI / UX<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+					<li><a href="demo/PDF/hh_project.pdf" target="blank">hh project</a></li>
+					<li><a href="uiux.html">feed and sorting</a></li>
+					<li><a href="uiux2.html">shopping cart</a></li> 
+					<li><a href="uiux3.html">entertainment</a></li> 
+					<li><a href="demo/PDF/ui_design.pdf" target="blank">user interface</a></li> 
+              </ul>
+            </li>    
+			<li><a href="web.html">Web</a></li>
+			<li><a href="print.html">Print / Event</a></li>
+			<li><a href="creativity.html">Creativity</a></li>
+			<li><a href="resume.html">Resume</a></li>
+		</ul>
+	</nav>
+
+	<div id="slide-menu" class="side-nav">
+		<a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+		<ul>
+		<li><a href="index.html">About Me</a></li>
+			<li class="dropdown"><a class="dropdown-toggle focus">UI / UX<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="uiux.html">feed and sorting</a></li>
+                <li><a href="uiux2.html">shopping cart</a></li> 
+								<li><a href="uiux3.html">entertainment</a></li>      
+								<li><a href="demo/ui-mockup/index.html" target="blank">user interface</a></li>          
+              </ul>
+            </li>    
+			<li><a href="web.html">Web</a></li>
+			<li><a href="print.html">Print / Event</a></li>
+			<li><a href="creativity.html">Creativity</a></li>
+			<li><a href="resume.html">Resume</a></li>
+		</ul>
+	</div>
+
+<div id="main">
+
+<section>
+	<div class="container">
+		<div class="row">
+		<div class="col-sm-12">
+			<h1>Entertainment</h1>
+		</div>
+		<div class="col-sm-6 animated fadeInLeft">
+			<img src="img/uiux/wireframe/entertainmeny8.png">
+		</div>
+		<div class="col-sm-6 animated fadeInRight">
+			<img src="img/uiux/wireframe/entertainmeny9.png">
+		</div>
+		</div>
+	</div>
+</section>
+
+<section class="section-bg">
+	<div class="container">
+		<div class="row align-item-center">
+		<div class="col-sm-2 animated fadeInLeft">
+			<h1>Style Guide</h1>
+			<img src="img/uiux/wireframe/entertainment2.jpg" >
+		</div>
+		<div class="col-sm-2 animated fadeInRight">
+			<img src="img/uiux/wireframe/entertainment3.jpg">
+		</div>
+		<div class="col-sm-2 animated fadeInRight">
+			<img src="img/uiux/wireframe/entertainment4.jpg">
+		</div>
+		<div class="col-sm-2 animated fadeInRight">
+			<img src="img/uiux/wireframe/entertainment5.jpg">
+		</div>
+		<div class="col-sm-2 animated fadeInRight">
+			<img src="img/uiux/wireframe/entertainment6.jpg">
+		</div>
+		</div>
+	</div>
+</section>
+
+<section>
+	<div class="container">
+		<div class="row">
+		<div class="col-sm-12">
+			<img src="img/uiux/wireframe/entertainment.jpg">
+		</div>
+		</div>
+	</div>
+</section>
+
+</div>
+
+<!-- javascript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')
+</script>
+<!--dropdown menu-->
+<script src="js/menu.js"></script>
+
+
+
+	<script>
+	function openSlideMenu(){
+		document.getElementById('slide-menu').style.width='200px';
+		document.getElementById('main').style.marginLeft='200px';
+	}	
+	function closeSlideMenu(){
+		document.getElementById('slide-menu').style.width='0px';
+		document.getElementById('main').style.marginLeft='0px';
+	}	
+	</script>
+
+	<!--fixes menu on to when scrolling-->
+	<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("navbar");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+	
+</body>
+</html>

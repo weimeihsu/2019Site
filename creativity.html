@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Creativity</title>
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="css/parallax-creative.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+    <![endif]-->
+    
+  </head>
+  
+  <body>
+
+  <nav class="navbar" id="navbar">
+		<span class="open-slide">
+		
+		 <a class="sandwich-menu" onclick="openSlideMenu()">
+		 	<span></span>
+		 	<span></span>
+		 	<span></span> 
+		</a>
+		</span>
+
+		<ul class="navbar-nav">
+			<li><a href="index.html">About Me</a></li>
+			<li class="dropdown"><a class="dropdown-toggle">UI / UX<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="demo/PDF/hh_project.pdf" target="blank">hh project</a></li>
+                <li><a href="uiux.html">feed and sorting</a></li>
+                <li><a href="uiux2.html">shopping cart</a></li> 
+                <li><a href="uiux3.html">entertainment</a></li> 
+                <li><a href="demo/PDF/ui_design.pdf" target="blank">user interface</a></li>               
+              </ul>
+            </li>    
+			<li><a href="web.html">Web</a></li>
+      <li><a href="print.html">Print / Event</a></li>
+      <li><a href="creativity.html" class="focus">Creativity</a></li>
+			<li><a href="resume.html">Resume</a></li>
+		</ul>
+</nav>
+
+<div id="slide-menu" class="side-nav">
+		<a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+		<ul>
+		<li><a href="index.html">About Me</a></li>
+			<li class="dropdown"><a class="dropdown-toggle">UI / UX<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="uiux.html">feed and sorting</a></li>
+                <li><a href="uiux2.html">shopping cart</a></li> 
+                <li><a href="uiux3.html">entertainment</a></li>  
+                <li><a href="demo/ui-mockup/index.html" target="blank">user interface</a></li>              
+              </ul>
+            </li>    
+			<li><a href="web.html">Web</a></li>
+      <li><a href="print.html">Print / Event</a></li>
+      <li><a href="creativity.html" class="focus">Creativity</a></li>
+			<li><a href="resume.html">Resume</a></li>
+		</ul>
+</div>
+	
+
+<div id="main">
+	<section>
+	<div class="container">
+		<h1>Creativity</h1>
+	</div>
+	</section>
+
+    <section>   
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <img src="img/creativity/Robot_w.jpg">
+                <img src="img/3D/little-ns/head.png">
+                <img src="img/creativity/ring.png">
+                <img src="img/3D/cny.jpg">
+              </div>
+            </div>
+            <div class="row p-12">
+              <div class="col-sm-3-np"> 
+                <video controls>
+                  <source src="img/creativity/running_cat.mp4" type="video/mp4">
+                  Your browser does not support HTML5 video.
+                </video></div>
+              <div class="col-sm-3-np"> 
+              <video controls>
+                <source src="img/creativity/jungle.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+              </video></div>
+              <div class="col-sm-3-np"> 
+                <img src="img/creativity/homepage.gif" alt=""></div>
+              <div class="col-sm-3-np"> 
+                  <video controls>
+                    <source src="img/creativity/whale.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                  </video></div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                 <img src="img/creativity/pirate.png">
+                <img src="img/3D/annual-dinner.jpg">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6"><img src="img/creativity/rabbit.png"></div>
+              <div class="col-sm-6"><img src="img/creativity/bday.gif"></div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                  <img src="img/creativity/claw-machine.jpg">
+                <img src="img/creativity/greeting.png"></div>
+            </div>
+          </div>
+    </section>
+
+</div>
+        
+          
+        
+
+      
+
+    
+
+
+    <!-- javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+    window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')
+    </script>
+    <!--dropdown menu-->
+    <script src="js/menu.js"></script>
+    <!--open and close the slide menu-->
+    <script>
+	function openSlideMenu(){
+		document.getElementById('slide-menu').style.width='200px';
+		document.getElementById('main').style.marginLeft='200px';
+	}	
+	function closeSlideMenu(){
+		document.getElementById('slide-menu').style.width='0px';
+		document.getElementById('main').style.marginLeft='0px';
+	}	
+  	</script>
+
+	<!--fixes menu on to when scrolling-->
+	<script>
+	window.onscroll = function() {myFunction()};
+
+	var header = document.getElementById("navbar");
+	var sticky = header.offsetTop;
+
+	function myFunction() {
+	  if (window.pageYOffset > sticky) {
+	    header.classList.add("sticky");
+	  } else {
+	    header.classList.remove("sticky");
+	  }
+	}
+	</script>
+
+  </body>
+</html>

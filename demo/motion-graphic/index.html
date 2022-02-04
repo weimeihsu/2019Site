@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body, html{
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+        }
+        .container{
+            width: 590px;
+            margin: 0 auto;
+            background: #fecb00;
+            padding: 10px 5px;
+        }
+        header img{
+            width: 30%;
+            display: block;
+            margin: 0 auto;
+        }
+        #anim{
+            max-width: 600px;
+            max-height: 600px;
+            margin: 0 auto;
+            background-color: #CC1E48;
+        }
+        @media screen and (max-width: 600px) {
+            .container{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header id="header"></header>
+    </div>
+    <div id="anim"></div>
+    
+    <script src="lottie.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

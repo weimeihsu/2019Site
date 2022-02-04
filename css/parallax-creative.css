@@ -1,0 +1,294 @@
+
+
+/*----------------------------------
+  Background Grid
+------------------------------------*/
+
+
+.grid {
+  position: fixed;
+  width: 100%;
+}
+.grid-line {
+  height: 100vh;
+  border-left: 1px solid #ccc;
+}
+
+
+
+
+.fixed-top {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: #cbd077;
+  border-radius: 12px;
+  z-index: -1;
+  margin-top: -220px;
+  margin-left: 100px;
+}
+
+
+/*----------------------------------
+  Main
+------------------------------------*/
+
+.absolute {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  margin-top: 100px;
+}
+.absolute.above {
+  z-index: 2;
+}
+.absolute h2 {
+  font-size: 140px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: #F0F0F0;
+  z-index: -1;
+}
+.lg-green {
+  width: 160px;
+  height: 160px;
+  background: #cbd077;
+  border-radius: 12px;
+  margin-left: -80px;
+  margin-top: 200px;
+}
+.sm-green {
+  width: 60px;
+  height: 60px;
+  background: #cbd077;
+  border-radius: 12px;
+  margin-left: -30px;
+  margin-top: 400px;
+}
+.xs-green {
+  width: 60px;
+  height: 60px;
+  background: #cbd077;
+  border-radius: 12px;
+  margin-left: -30px;
+  margin-top: 400px;
+}
+
+.md-green {
+  width: 120px;
+  height: 120px;
+  background: #cbd077;
+  border-radius: 12px;
+  margin-left: -60px;
+  margin-top: 10px;
+}
+.lg-blue {
+  width: 60px;
+  height: 60px;
+  background: #71c3db;
+  border-radius: 12px;
+  margin-left: 57px;
+  margin-top: 60px;
+}
+.sm-blue {
+  width: 30px;
+  height: 30px;
+  background: #71c3db;
+  border-radius: 8px;
+  margin-left: -30px;
+  margin-top: 400px;
+}
+
+
+
+
+.date {
+  margin-top: 400px;
+  font-size: 48px;
+  font-weight: 600;
+  color: #71c3db;
+}
+.temp {
+  margin-top: 200px;
+  font-size: 280px;
+  font-weight: 900;
+  letter-spacing: -0.07em;
+  color: #71c3db;
+}
+
+
+
+
+
+
+
+.text-editor {
+  background: #222;
+  padding: 60px 50px;
+  border-radius: 12px;
+  margin-left: 15px;
+}
+code {
+  text-align: left;
+  padding: 0;
+  font-size: 22px;
+  background: none;
+  border-radius: 0;
+  color: #cbd077;
+}
+
+
+
+.md-facebook {
+  width: 60px;
+  height: 60px;
+  background: #71c3db;
+  border-radius: 12px;
+  margin-left: 68px;
+  margin-top: 600px;
+}
+.md-twitter {
+  width: 120px;
+  height: 120px;
+  background: #cbd077;
+  border-radius: 12px;
+  margin-left: -60px;
+  margin-top: 60px;
+}
+.md-dixonandmoe {
+  width: 120px;
+  height: 120px;
+  background: #71c3db;
+  border-radius: 12px;
+  margin-left: -60px;
+  margin-top: 760px;
+}
+.bt-green {
+  width: 60px;
+  height: 60px;
+  background: #cbd077;
+  border-radius: 12px;
+  margin-left: -30px;
+  margin-top: 700px;
+}
+.bt-blue {
+  width: 80px;
+  height: 80px;
+  background: #71c3db;
+  border-radius: 12px;
+  margin-left: 57px;
+  margin-top: 600px;
+}
+
+
+
+@-webkit-keyframes fuzz /* Safari and Chrome */ {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    /*-webkit-transform: scaleY(1);*/
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fuzz2 /* Safari and Chrome */ {
+  0% {
+    opacity: 0;
+  }
+  48% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fuzz3 /* Safari and Chrome */ {
+  0% {
+    opacity: 0;
+  }
+  54% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+@-webkit-keyframes stretch /* Safari and Chrome */ {
+  0% {
+    -webkit-transform: scaleX(0);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: scaleX(0);
+    opacity: 1;
+  }
+  60% {
+    -webkit-transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20px, 0);
+  }
+  30% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+/*----------------------------------
+  Medium devices: iPad vertical
+------------------------------------*/
+
+@media (max-width: 991px) {
+
+
+}
+
+
+
+/*----------------------------------
+  Small devices: iPhone 6+ and below
+------------------------------------*/
+
+@media (max-width: 767px) {
+
+
+}
+
+
+/*----------------------------------
+  iPhone 6 & 6+ specific text bump
+------------------------------------*/
+
+@media (max-width: 991px) and (max-height: 736px) and (min-height: 481px) {
+
+
+}
+
+
+
