@@ -14,7 +14,7 @@ html {
   box-sizing: inherit;
 }
 body{
-	font-family: "roboto", San-Serif ;
+	font-family:Arial, Helvetica, sans-serif;
 	margin: 0;
 	padding: 0;
 	height: 100%;
@@ -41,10 +41,10 @@ h3{
 		color: #636B76;
 	}
 .navbar{
-	z-index: 100; 
+	z-index: 100;
 	height: 61px;
 	background-color:rgba(0,0,0,0.8);
-	
+
 }
 .navbar a{
 	color: #fff;
@@ -71,7 +71,7 @@ h3{
 .navbar a:hover, .navbar a.focus{
 	border-bottom: solid 2px #fff;
 	transition: 0.8s;
-	
+	cursor: pointer;
 	width: 100%;
 }
 .caret {
@@ -223,7 +223,7 @@ a.sandwich-menu:hover{
 .col-sm-3-np,.col-sm-4-np, .col-sm-8-np, .col-sm-6-np{
 	position: relative;
 	width: 100%;
-	min-height: 1px; 
+	min-height: 1px;
 	text-align: center;
 	margin-bottom: -4px;
 }
